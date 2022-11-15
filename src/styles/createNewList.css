@@ -1,0 +1,137 @@
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    z-index: 1000000;
+}
+
+.createCard {
+    position: relative;
+    margin: auto;
+    background-color: white;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 30px;
+}
+
+.createCard h1{
+    font-family: 'Aricum Variable Concept';
+    font-size: 25px;
+    font-weight: bold;
+    margin: auto;
+    padding: 10px 0 0 0;
+}
+
+.createCard .close{
+    width: 70px;
+    height: 40px;
+    display: flex;
+    user-select: none;
+    right: 40px;
+    top: 30px;
+    position: absolute;
+    transition: background-color 100ms ease;
+    border-radius: 5px;
+}
+
+.createCard .close:hover {
+    cursor: pointer;
+    background-color: var(--gray-3);
+}
+
+.createCard .close:active {
+    background-color: var(--gray-1);
+}
+
+.createCard .close img {
+    width: 30px;
+    height: 30px;
+    margin: auto;
+}
+
+.createCard > form {
+    width: 100%;
+    box-shadow: none;
+    border: none;
+    font-family: 'Aricum Variable Concept';
+    color: black;
+    display: flex;
+    margin: 0;
+    padding: 10px;
+}
+
+.createForm .title::placeholder {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.createForm label {
+    margin: 10px auto 0 0;
+    font-size: 20px;
+    padding: 0 10px;
+}
+
+.createForm #description {
+    border: 4px var(--gray-2) solid;
+    height: 100px;
+    margin: 10px 0;
+}
+
+.createForm #description:focus{
+    border: 4px var(--pantone-1) solid;
+}
+
+.createForm .colorDiv {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.createForm .colorDiv input:hover {
+    cursor: pointer;
+}
+
+.createForm .colorDiv .color {
+    width: 10%;
+    height: 40px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.createForm .colorDiv .color1 {
+    background-color: var(--color-1);
+}
+
+.createForm .colorDiv .color2 {
+    background-color: var(--color-2);
+}
+
+.createForm .colorDiv .color3 {
+    background-color: var(--color-3);
+}
+
+.createForm .colorDiv .color4 {
+    background-color: var(--color-4);
+}
+
+.createForm .colorDiv .color5 {
+    background-color: var(--color-5);
+}
+
+.createForm .colorDiv .color6 {
+    background-color: var(--color-6);
+}
+
+.createForm .colorDiv .color7 {
+    background-color: var(--color-7);
+}
+
+.createForm button {
+    margin: 10px 0;
+}

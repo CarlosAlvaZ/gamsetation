@@ -1,0 +1,93 @@
+.background {
+    background: url(../imgs/login-background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    font-family: 'Aricum Variable Concept';
+    background-color: rgba(255, 255, 255);
+    padding: 40px;
+    border-radius: 0 0 10px 10px;
+    border-top: 10px var(--pantone-1) solid;
+    box-shadow: 0 0 15px black;
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    text-align: center;
+    position: relative;
+}
+
+form h4 {
+    font-size: 35px;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+form h4 span{
+    font-weight: bolder;
+    color: var(--pantone-1);
+}
+
+form input {
+    height: 40px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    border-bottom: gray 4px solid;
+    margin: 20px 0;
+    outline: none;
+}
+
+form input:not(:placeholder-shown), form input:focus{
+    border-bottom: var(--pantone-1) 4px solid;
+    outline: none;
+}
+
+form button {
+    border: none;
+    background-color: var(--pantone-1);
+    height: 50px;
+    color: white;
+    font-size: 18px;
+}
+
+form button:hover {
+    background-color: var(--pantone-2);
+    cursor: pointer;
+}
+
+.alert {
+    display: flex;
+    animation-name: fadeout;
+    animation-duration: 5500ms;
+    animation-timing-function: ease-out;
+    position: absolute;
+    top: 60px;
+    left: auto;
+    width: 50%;
+    height: 50px;
+    background-color: var(--pantone-1);
+    color: white;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    z-index: 10000;
+}
+
+@keyframes fadeout {
+    0% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

@@ -1,0 +1,33 @@
+.navbar {
+    background-color: var(--pantone-1);
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.navbar img {
+    width: 50px;
+    height: 50px;
+    margin: 0 0 0 30px;
+    padding: 0;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.text {
+    margin: auto 0 auto 40px;
+}
+
+.text h1{
+    font-family: 'Aricum Variable Concept';
+    font-size: 35px;
+    padding: 0;
+    color: white;
+    margin: auto;
+}
+
+.text h1 span {
+    font-size: 40px;
+    font-weight: bolder;
+    color: var(--pantone-2);
+}
