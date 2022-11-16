@@ -10,7 +10,7 @@
 
 # Links 🔗
 
-> Trello: hhttps://trello.com/invite/b/F7wQIGyV/ATTIa62cbf44616cf67a895d47e419534338711F175D/proyectocatedra-sid
+> Trello: https://trello.com/invite/b/F7wQIGyV/ATTIa62cbf44616cf67a895d47e419534338711F175D/proyectocatedra-sid
 
 > Link manual Técnico: https://drive.google.com/file/d/1v_J_TkSDXaWt3C_dlXVcHdnvCU4iswW6/view?usp=sharing
 
