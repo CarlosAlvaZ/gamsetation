@@ -4,15 +4,13 @@ import WishListCard from '../components/WishListCard'
 import AddNew from '../components/AddNew'
 import CreateNewList from '../components/CreateNewList'
 import RemoveElement from '../components/RemoveElement'
-import ConfirmDelete from '../components/ConfirmDelete'
 import '../styles/home.css'
 
 export default function Home() {
 
     const [ creatingNewElement, setCreatingNewElement ] = useState(false)
     const [ draggingState, setDraggingState ] = useState({dragging: false, draggingOverRemoveElement: false})
-    const [ confirmState, setConfirmState ] = useState(true)
-    const [ confirmReturn, setconfirmReturn ] = useState(false)
+
 
     function changeCreatingState(){
         setCreatingNewElement(prev => !prev)
@@ -37,24 +35,28 @@ export default function Home() {
         })
     }
 
-    function changeConfirmState(trueFalse){
-        setConfirmState(trueFalse)
-    }
-
-    function changeConfirmReturn(trueFalse){
-        setconfirmReturn(trueFalse)
-    }
-
     return (
         <>  
             <div style={{width: '100%', minHeight: '80vh', display: 'flex', flexDirection: 'column'}}>  
                 <Layout title="Listas de Deseos">
                     <CreateNewList displayed={creatingNewElement}  handler={changeCreatingState}/>
-                    <ConfirmDelete confirmState={confirmState} elementName='ejemplo' changeConfirmReturn={changeConfirmReturn}/>
                     <div className='cards'>
 
-                        <WishListCard color='3' title='Lista ejemplo 1' items='10 items' 
-                        draggHandler={ e => changeDraggingState(e)} draggingState={draggingState} setConfirmState={changeConfirmState} confirmReturn={confirmReturn}/>
+                        {
+                            fetch('http://localhost:3000/lists')
+                            .then(res => res.json)
+                            .then(res => {
+                                console.log(res)
+
+                                res.map( item => {
+                                    return (
+                                        <WishListCard id={item._id} color={item.color} title={item.nombre_lista} items={item.elementos.length} 
+                                        draggHandler={ e => changeDraggingState(e)} draggingState={draggingState}/>
+                                    )
+                                })
+                            })    
+                        }
+
                         <AddNew handler={changeCreatingState} dragging={draggingState.dragging}/>
                         <RemoveElement dOverHandler={ e => draggOverHandler(e) } dOutHandler={ e => draggOutHandler(e) } dragging={draggingState.dragging}/>
 

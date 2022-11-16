@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import '../styles/wishListCard.css'
 
-export default function WishListCard({color, title, items, draggHandler, draggingState, setConfirmState, confirmReturn}) {
+export default function WishListCard({id, color, title, items, draggHandler, draggingState}) {
 
     let colorToRender = parseInt(color)
     if(colorToRender < 1 || colorToRender > 7){
@@ -17,15 +17,11 @@ export default function WishListCard({color, title, items, draggHandler, draggin
     
     const calcDragg = e => {
         if(draggingState.draggingOverRemoveElement){
-            setConfirmState(true)
+            console.log(id)
         } else {
             return
         }
     }
-
-    useEffect(()=>{
-        console.log(confirmReturn)
-    }, [ confirmReturn ])
 
     return (
         <div className='card' onClick={navigateToLocation} draggable onDragStart={ draggHandler } onDragEnd={ e => {draggHandler(e); calcDragg(e)} } >
