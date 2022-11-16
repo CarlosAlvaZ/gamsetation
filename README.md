@@ -1,3 +1,25 @@
+# VideoJuegos 💻
+
+# Integrantes 👤
+
+- Siliezar Colocho, Carlos Eduardo - #SC202203
+- Alvarenga Vázquez, Carlos Benjamín - #AV221812
+- Grupo: 01T
+
+
+
+# Links 🔗
+
+> Trello: hhttps://trello.com/invite/b/F7wQIGyV/ATTIa62cbf44616cf67a895d47e419534338711F175D/proyectocatedra-sid
+
+> Link manual Técnico: https://drive.google.com/file/d/1v_J_TkSDXaWt3C_dlXVcHdnvCU4iswW6/view?usp=sharing
+
+> Link manual de usuario: https://drive.google.com/file/d/15A2KSKIs-ybgc3cItcW1CDOPy6L1JOaT/view?usp=sharing
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
